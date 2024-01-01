@@ -1,7 +1,10 @@
 const puppeteer = require("puppeteer");
 
-const targetURL = "http://gifu-triathlon.jp/event2024.html";
-const targetString = "木曽三川";
+//【つかいかた】
+//node main.js 対象のURL 対象の文字列
+//のようにコマンドで指定して呼び出す
+const targetURL = process.argv[2];
+const targetString = process.argv[3];
 
 const main = async (targetURL, targetString) => {
   // Puppeteerを起動
